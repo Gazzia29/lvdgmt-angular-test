@@ -1,0 +1,11 @@
+.sun {
+  position: absolute;
+  top: 6%;
+  left: 20%;
+  border-radius: 50%;
+  color: white;
+  background-color: currentColor;
+  box-shadow: 0 0px 150px 90px currentColor, 0 0px 23.8px 25px currentColor,
+    0 0px 4.8px 5px currentColor;
+  transition: box-shadow 1s ease, top 3s ease, left 1.5s ease, color 1.5s ease;
+}

@@ -83,21 +83,17 @@
             "tsConfig": ["tsconfig.app.json", "e2e/tsconfig.json"],
             "exclude": ["**/node_modules/**"]
           }
-        },
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "newng:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "newng:serve:production"
-            }
-          }
         }
       }
     }
   },
-  "defaultProject": "newng"
+  "defaultProject": "newng",
+  "schematics": {
+    "@schematics/angular": {
+      "component": {
+        "spec": false,
+        "skip-tests": true
+      }
+    }
+  }
 }

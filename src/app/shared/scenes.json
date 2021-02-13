@@ -1,0 +1,13 @@
+[
+  {
+    "id": 0,
+    "scene": {
+      "exterior": true,
+      "elements": [
+        { "imgName": "tree.png", "zIndex": 150, "xFrom": "right", "w": 63 },
+        { "imgName": "fore.png", "zIndex": 104 },
+        { "imgName": "back.png", "zIndex": 51 }
+      ]
+    }
+  }
+]

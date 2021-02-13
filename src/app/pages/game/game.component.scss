@@ -8,21 +8,23 @@
   justify-content: center;
   align-items: center;
   background-color: #130f12;
+  flex-direction: column;
 }
 
 main {
   flex: 1 1 auto;
   height: 100%;
+  width: 100%;
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 app-ratio-container {
   display: flex;
   height: 100%;
   width: 100%;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex: 1 1 auto;
 }
@@ -32,4 +34,17 @@ app-nav-bar {
   background-color: white;
   width: 100%;
   flex: 0 0 auto;
+}
+
+app-background {
+  flex: 1 1 auto;
+}
+
+app-story {
+  background-color: #dbdbdb;
+  height: 100%;
+  width: 460px;
+  position: absolute;
+  z-index: 2;
+  right: 0;
 }

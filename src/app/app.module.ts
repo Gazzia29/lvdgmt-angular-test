@@ -10,6 +10,10 @@ import { NavBarComponent } from '@components/nav-bar/nav-bar.component';
 import { RatioContainerComponent } from '@components/ratio-container/ratio-container.component';
 import { BackgroundComponent } from '@components/background/background.component';
 import { TextContentComponent } from '@components/text-content/text-content.component';
+import { SceneElementComponent } from './components/scene-element/scene-element.component';
+import { CloudComponent } from './components/cloud/cloud.component';
+import { StoryComponent } from './components/story/story.component';
+import { SunComponent } from './components/sun/sun.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +25,10 @@ import { TextContentComponent } from '@components/text-content/text-content.comp
     RatioContainerComponent,
     BackgroundComponent,
     TextContentComponent,
+    SceneElementComponent,
+    CloudComponent,
+    StoryComponent,
+    SunComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

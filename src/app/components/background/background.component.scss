@@ -1,5 +1,88 @@
-#background {
-  background-color: #c9e0fb;
+.background {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  max-width: 100%;
+  transform: translateZ(0);
+  opacity: 0;
+  transition: opacity 3s 1s;
+
+  &.hour0,
+  &.hour2 {
+    background: linear-gradient(to bottom, #020111 60%, #20202c 100%);
+  }
+
+  &.hour4 {
+    background: linear-gradient(to bottom, #20202c 0%, #515175 100%);
+  }
+
+  &.hour6 {
+    background: linear-gradient(to bottom, #40405c 0%, #6f71aa 80%, #8a76ab 100%);
+  }
+
+  &.hour8 {
+    background: linear-gradient(to bottom, #757abf 0%, #8583be 60%, #eab0d1 100%);
+  }
+
+  &.hour10 {
+    background: linear-gradient(to bottom, #94c5f8 1%, #a6e6ff 70%, #b1b5ea 100%);
+  }
+
+  &.hour12 {
+    background: linear-gradient(to bottom, #9be2fe 0%, #67d1fb 100%);
+  }
+
+  &.hour14 {
+    background: linear-gradient(to bottom, #6bc6f3 0%, #4d6785 100%);
+  }
+
+  &.hour16 {
+    background: linear-gradient(to bottom, #27568d 0%, #5eaac5 50%, #9da671 100%);
+  }
+
+  &.hour18 {
+    background: linear-gradient(to bottom, #4b617a 0%, #e1a45e 30%, #c0713c 70%, #e26928 100%);
+  }
+
+  &.hour20 {
+    background: linear-gradient(to bottom, #071B26 0%, #071B26 30%, #8A3B12 80%, #240E03 100%);
+  }
+
+  &.hour22 {
+    background: linear-gradient(to bottom, #090401 50%, #4B1D06 100%);
+  }
+
+  &.morning {
+    background: linear-gradient(rgb(74, 73, 105) 0%, rgb(112, 114, 171) 50%, rgb(205, 130, 160) 100%);
+  }
+
+  &.midday {
+    background: linear-gradient(to top, rgb(213, 232, 253) 75%, rgb(192, 210, 255));
+  }
+
+  &.afternoon {
+    background: linear-gradient(rgb(22, 60, 82) 0%, rgb(79, 79, 71) 30%, rgb(197, 117, 45) 60%, rgb(183, 73, 15) 80%, rgb(47, 17, 7) 100%);
+  }
+
+  &.night {
+    background: linear-gradient(to top, rgb(22, 10, 30) 37%, rgb(0, 0, 0));
+  }
+
+  &.interior {
+    background: black;
+  }
+
+  &.activated {
+    transition: opacity 3s 0s;
+    opacity: 1;
+  }
+}
+
+.elementsContainer {
   height: 100%;
   width: 100%;
   position: absolute;

@@ -1,0 +1,37 @@
+.cloud {
+  height: 40%;
+  transform: translateZ();
+  background-size: cover;
+  background-repeat: repeat;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  transition: 3s ease;
+  z-index: 100;
+  animation-duration: 150s !important;
+  background-image: url("../../../assets/clouds/Fore01.png")
+}
+
+.back {
+  margin-top: 11vh;
+  z-index: 50;
+  animation-duration: 200s !important;
+  background-image: url("../../../assets/clouds/Back01.png")
+}
+
+.animated {
+  animation: slide 0s linear infinite;
+}
+
+
+@keyframes slide {
+  from {
+    background-position-x: 0;
+    transform: translateZ(0);
+  }
+
+  to {
+    background-position-x: -100vw;
+    transform: translateZ(0);
+  }
+}

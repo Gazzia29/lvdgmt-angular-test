@@ -1,1 +1,19 @@
-<div id="background"></div>
+<div class="background hour0" [class.activated]="scene.sceneType == 'exterior' && scene.bgPeriod == 0"></div>
+<div class="background hour2" [class.activated]="scene.sceneType == 'exterior' && scene.bgPeriod == 2"></div>
+<div class="background hour4" [class.activated]="scene.sceneType == 'exterior' && scene.bgPeriod == 4"></div>
+<div class="background hour6" [class.activated]="scene.sceneType == 'exterior' && scene.bgPeriod == 6"></div>
+<div class="background hour8" [class.activated]="scene.sceneType == 'exterior' && scene.bgPeriod == 8"></div>
+<div class="background hour10" [class.activated]="scene.sceneType == 'exterior' && scene.bgPeriod == 10"></div>
+<div class="background hour12" [class.activated]="scene.sceneType == 'exterior' && scene.bgPeriod == 12"></div>
+<div class="background hour14" [class.activated]="scene.sceneType == 'exterior' && scene.bgPeriod == 14"></div>
+<div class="background hour16" [class.activated]="scene.sceneType == 'exterior' && scene.bgPeriod == 16"></div>
+<div class="background hour18" [class.activated]="scene.sceneType == 'exterior' && scene.bgPeriod == 18"></div>
+<div class="background hour20" [class.activated]="scene.sceneType == 'exterior' && scene.bgPeriod == 20"></div>
+<div class="background hour22" [class.activated]="scene.sceneType == 'exterior' && scene.bgPeriod == 22"></div>
+<div class="background interior" [class.activated]="scene.sceneType == 'interior'"></div>
+<div class="elementsContainer" *ngIf="windowSet">
+  <app-scene-element *ngFor="let element of scene.backgroundElements" [element]="element"></app-scene-element>
+  <app-cloud [isBack]="true"></app-cloud>
+  <app-cloud></app-cloud>
+  <app-sun></app-sun>
+</div>
