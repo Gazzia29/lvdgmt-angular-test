@@ -1,1 +1,29 @@
-[]
+[
+  {
+    "id": 0,
+    "title": "Errance",
+    "fluff": [
+      {
+        "string": "0_title"
+      }
+    ],
+    "main": [
+      {
+        "conditions": [["timeperiod", "==", "0"]],
+        "string": "0_morning"
+      },
+      {
+        "conditions": [["timeperiod", "==", "1"]],
+        "string": "0_day"
+      },
+      {
+        "conditions": [["timeperiod", "==", "2"]],
+        "string": "0_dusk"
+      },
+      {
+        "conditions": [["timeperiod", "==", "3"]],
+        "string": "0_night"
+      }
+    ]
+  }
+]
