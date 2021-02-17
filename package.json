@@ -4,11 +4,13 @@
   "main": "main.js",
   "scripts": {
     "start": "npm-run-all -p electron:serve ng:serve",
-    "build": "ng build",
     "lint": "ng lint",
     "ng:serve": "ng serve -o",
     "electron:serve": "wait-on tcp:4200 && npm run electron:serve-tsc && npx electron . --serve",
-    "electron:serve-tsc": "tsc -p tsconfig.app.json"
+    "electron:serve-tsc": "tsc -p tsconfig.app.json",
+    "build": "npm run electron:serve-tsc && ng build --base-href ./",
+    "build:dev": "npm run build -- -c dev",
+    "build:prod": "npm run build -- -c production"
   },
   "private": true,
   "dependencies": {
