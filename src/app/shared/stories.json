@@ -4,25 +4,32 @@
     "title": "Errance",
     "fluff": [
       {
-        "string": "0_title"
+        "string_id": "0_title"
       }
     ],
     "main": [
       {
-        "conditions": [["timeperiod", "==", "0"]],
-        "string": "0_morning"
+        "conditions": [["timeperiod", "is", "0"]],
+        "string_id": "0_morning"
       },
       {
-        "conditions": [["timeperiod", "==", "1"]],
-        "string": "0_day"
+        "conditions": [["timeperiod", "is", "1"]],
+        "string_id": "0_day"
       },
       {
-        "conditions": [["timeperiod", "==", "2"]],
-        "string": "0_dusk"
+        "conditions": [["timeperiod", "is", "2"]],
+        "string_id": "0_dusk"
       },
       {
-        "conditions": [["timeperiod", "==", "3"]],
-        "string": "0_night"
+        "conditions": [["timeperiod", "is", "3"]],
+        "string_id": "0_night"
+      }
+    ],
+    "actions": [
+      {
+        "title_id": "ac_ti_0_to_1",
+        "desc_id": "ac_de_0_to_1",
+        "action": ["level", "set", "2"]
       }
     ]
   }

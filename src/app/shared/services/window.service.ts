@@ -10,7 +10,6 @@ export class WindowService {
 
   setSize(value: any): void {
     this.size = value;
-    console.log(value);
     this.windowChange.emit();
   }
   getSize(): any {

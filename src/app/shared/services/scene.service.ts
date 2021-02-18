@@ -20,11 +20,10 @@ export class SceneService {
 
   setSceneFromId(id: number): void {
     const sceneObject = Scenes.find((s) => s.id === id);
-    if (sceneObject) {
-      this.setSceneType(sceneObject.scene.exterior ? 'exterior' : 'interior');
-      this.setBackgroundElements(sceneObject.scene.elements);
-      this.sceneChange.emit();
-    }
+    if (!sceneObject) return;
+    this.setSceneType(sceneObject.scene.exterior ? 'exterior' : 'interior');
+    this.setBackgroundElements(sceneObject.scene.elements);
+    this.sceneChange.emit();
   }
 
   getSceneType(): string {

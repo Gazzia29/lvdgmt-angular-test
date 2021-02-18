@@ -52,5 +52,15 @@
       { "link": "chemin", "label": "le chemin" },
       " continue et serpente dans l'obscurité."
     ]
+  },
+  {
+    "id": "ac_ti_0_to_1",
+    "content": ["En direction du bois"]
+  },
+  {
+    "id": "ac_de_0_to_1",
+    "content": [
+      "De toute évidence, la fraîcheur d'un bois ne vous fera pas de mal maintenant."
+    ]
   }
 ]
