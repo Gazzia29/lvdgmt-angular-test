@@ -12,7 +12,7 @@ export class RatioContainerComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {}
   ngAfterViewInit(): void {
-    console.log(this.elem.nativeElement);
+    // console.log(this.elem.nativeElement);
 
     this.windowService.setSize({
       h: this.elem.nativeElement.offsetHeight,
