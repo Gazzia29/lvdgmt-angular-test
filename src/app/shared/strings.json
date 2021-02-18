@@ -1,6 +1,10 @@
 [
   {
     "id": "0_title",
+    "content": ["Errance"]
+  },
+  {
+    "id": "0_fluff",
     "content": [
       "Vous voilà planté{f:e} au coeur de la plaine du Soufflant.//Malgré son nom, la plaine est chaude l'été mais pas la moindre brise ne se fait ressentir."
     ]
@@ -8,49 +12,25 @@
   {
     "id": "0_morning",
     "content": [
-      "Le jour se lève lentement, avec la même sensation pesante dans l'atmosphère.//Vers l'Ouest se trouve ",
-      { "link": "wood", "label": "un petit bois" },
-      ", dont les ombres se dissipent de minute en minute.//Vers l'Est, ",
-      { "link": "cabane", "label": "une petite cabane en bois" },
-      " se dresse sur une colline.//Au Nord, ",
-      { "link": "chemin", "label": "le chemin de terre" },
-      " continue et serpente vers le soleil levant."
+      "Le jour se lève lentement, avec la même sensation pesante dans l'atmosphère.//Vers l'Ouest se trouve un petit bois, dont les ombres se dissipent de minute en minute.//Vers l'Est, une petite cabane en bois se dresse sur une colline.//Au Nord, le chemin de terre continue et serpente vers le soleil levant."
     ]
   },
   {
     "id": "0_day",
     "content": [
-      "Les sauterelles chantent sous le ciel d'azur.//Vous êtes trempé{f:e} de sueur et l'atmosphère devient de plus en plus lourde..//En regardant vers l'Ouest, vous apercevez ",
-      { "link": "wood", "label": "un petit bois" },
-      " où vous pourrez vous rafraîchir.//Vers l'Est, ",
-      { "link": "cabane", "label": "une petite cabane en bois" },
-      " se dresse sur une colline.//Au Nord, ",
-      { "link": "chemin", "label": "le chemin de terre" },
-      " continue et serpente vers un vallon."
+      "Les sauterelles chantent sous le ciel d'azur.//Vous êtes trempé{f:e} de sueur et l'atmosphère devient de plus en plus lourde..//En regardant vers l'Ouest, vous apercevez un petit bois où vous pourrez vous rafraîchir.//Vers l'Est, une petite cabane en bois se dresse sur une colline.//Au Nord, le chemin de terre continue et serpente vers un vallon."
     ]
   },
   {
     "id": "0_dusk",
     "content": [
-      "Le nuit tombe et la température redescend lentement, mais l'atmosphère continue tout de même à s'alourdir...//Vers l'Ouest se trouve ",
-      { "link": "wood", "label": "un petit bois" },
-      ", dont les ombres s'allongent de minute en minute.//Vers l'Est, ",
-      { "link": "cabane", "label": "une petite cabane en bois" },
-      " se dresse sur une colline.//Au Nord, ",
-      { "link": "chemin", "label": "le chemin de terre" },
-      " continue et serpente vers le soleil couchant."
+      "Le nuit tombe et la température redescend lentement, mais l'atmosphère continue tout de même à s'alourdir...//Vers l'Ouest se trouve un petit bois, dont les ombres s'allongent de minute en minute.//Vers l'Est, une petite cabane en bois se dresse sur une colline.//Au Nord, le chemin de terre continue et serpente vers le soleil couchant."
     ]
   },
   {
     "id": "0_night",
     "content": [
-      "La nuit est tombée mais l'atmosphère continue tout de même à s'alourdir de minutes en minutes.//Vous ne distinguez pas grand-chose, seulement que vers l'Ouest se trouve ",
-      { "link": "wood", "label": "un petit bois obscur" },
-      ".//Vers l'Est, ",
-      { "link": "cabane", "label": "l'ombre d'une cabane" },
-      " se dresse sur une colline.//Au Nord, ",
-      { "link": "chemin", "label": "le chemin" },
-      " continue et serpente dans l'obscurité."
+      "La nuit est tombée mais l'atmosphère continue tout de même à s'alourdir de minutes en minutes.//Vous ne distinguez pas grand-chose, seulement que vers l'Ouest se trouve un petit bois obscur.//Vers l'Est, l'ombre d'une cabane se dresse sur une colline.//Au Nord, le chemin continue et serpente dans l'obscurité."
     ]
   },
   {
@@ -58,9 +38,13 @@
     "content": ["En direction du bois"]
   },
   {
-    "id": "ac_de_0_to_1",
+    "id": "ac_de_0_to_1_day",
     "content": [
       "De toute évidence, la fraîcheur d'un bois ne vous fera pas de mal maintenant."
     ]
+  },
+  {
+    "id": "ac_de_0_to_1_night",
+    "content": ["Obscur ou pas obscur, vous aimez les arbres et la nuit."]
   }
 ]

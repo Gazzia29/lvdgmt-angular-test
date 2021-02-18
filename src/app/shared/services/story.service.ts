@@ -1,8 +1,8 @@
+import { StringService } from './string.service';
 import { StringLogicService } from './stlogic.service';
 import { EventEmitter, Injectable } from '@angular/core';
 import { LevelService } from './level.service';
 import Stories from '../stories.json';
-import Strings from '../strings.json';
 import { TimeService } from './time.service';
 
 @Injectable({
@@ -10,16 +10,17 @@ import { TimeService } from './time.service';
 })
 export class StoryService {
   constructor(
-    private levelService: LevelService,
-    private timeService: TimeService,
-    private stringLogicService: StringLogicService
+    private levelSVC: LevelService,
+    private timeSVC: TimeService,
+    private stringLogicSVC: StringLogicService,
+    private stringSVC: StringService
   ) {
     this.setStoryFromId(0);
-    levelService.levelChange.subscribe((id: number) => {
+    levelSVC.levelChange.subscribe((id: number) => {
       this.setStoryFromId(id);
     });
-    timeService.timeChanged.subscribe(() => {
-      this.setStoryFromId(levelService.getId());
+    timeSVC.timeChanged.subscribe(() => {
+      this.setStoryFromId(levelSVC.getId());
     });
   }
   title = '';
@@ -31,13 +32,13 @@ export class StoryService {
     const storyObject = Stories.find((s) => s.id === id);
     if (!storyObject) return;
 
-    this.setTitle(storyObject.title);
+    this.setTitleFromObj(storyObject.title_id);
     this.setMainFromObj(storyObject.main);
     this.storyChange.emit();
   }
 
-  setTitle(title: string): void {
-    this.title = title;
+  setTitleFromObj(titleID: string): void {
+    this.title = this.stringSVC.get(titleID);
   }
 
   getTitle(): string {
@@ -46,14 +47,10 @@ export class StoryService {
 
   setMainFromObj(data: any[]): void {
     const appropriateStory = data.find((m) => {
-      return this.stringLogicService.checkConditions(m.conditions);
+      return this.stringLogicSVC.checkConditions(m.conditions);
     });
     if (!appropriateStory) return;
-    const stringObject = Strings.find(
-      (s) => s.id === appropriateStory.string_id
-    );
-    if (!stringObject) return;
-    this.main = stringObject.content;
+    this.main = this.stringSVC.get(appropriateStory.string_id);
   }
 
   getMain(): any {

@@ -38,8 +38,11 @@ export class StringLogicService {
   }
 
   timePeriod(logicArray: string[]): boolean {
+    const period = this.timeService.getPeriod();
     if (logicArray[1] === 'is') {
-      return this.timeService.getPeriod() === +logicArray[2];
+      return period === +logicArray[2];
+    } else if (logicArray[1] === 'not') {
+      return period !== +logicArray[2];
     } else return false;
   }
 }
