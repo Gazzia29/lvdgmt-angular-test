@@ -8,7 +8,7 @@
     "array-element-newline": "never",
     "array-type": false,
     "arrow-return-shorthand": true,
-    "curly": true,
+    "curly": false,
     "deprecation": {
       "severity": "warning"
     },
