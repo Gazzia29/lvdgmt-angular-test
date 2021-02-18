@@ -11,6 +11,7 @@ export class StoryComponent implements OnInit {
 
   title!: string;
   main!: string;
+  actions!: any[];
   ngOnInit(): void {
     this.applyStory();
     this.storyService.storyChange.subscribe(() => {
@@ -21,6 +22,6 @@ export class StoryComponent implements OnInit {
   applyStory(): void {
     this.title = this.storyService.getTitle();
     this.main = this.storyService.getMain();
-    console.log(this.main);
+    this.actions = this.storyService.getActions();
   }
 }

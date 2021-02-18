@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { SceneService } from '@app/shared/services/scene.service';
 import { TimeService } from '@app/shared/services/time.service';
 import { WindowService } from '@app/shared/services/window.service';
@@ -8,7 +8,7 @@ import { WindowService } from '@app/shared/services/window.service';
   templateUrl: './background.component.html',
   styleUrls: ['./background.component.scss'],
 })
-export class BackgroundComponent implements OnInit {
+export class BackgroundComponent implements OnInit, AfterViewInit {
   constructor(
     private sceneService: SceneService,
     private timeService: TimeService,
@@ -27,8 +27,13 @@ export class BackgroundComponent implements OnInit {
     this.timeService.timeChanged.subscribe(() => {
       this.applyScene();
     });
+  }
+
+  ngAfterViewInit(): void {
     this.windowService.windowChange.subscribe(() => {
-      this.windowSet = true;
+      setTimeout(() => {
+        if (this.windowSet === false) this.windowSet = true;
+      });
     });
   }
 

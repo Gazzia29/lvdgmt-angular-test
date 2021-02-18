@@ -24,6 +24,7 @@ export class StoryService {
     });
   }
   title = '';
+  actions: any;
   main: any;
 
   storyChange: EventEmitter<any> = new EventEmitter();
@@ -34,6 +35,7 @@ export class StoryService {
 
     this.setTitleFromObj(storyObject.title_id);
     this.setMainFromObj(storyObject.main);
+    this.setActionsFromObj(storyObject.actions);
     this.storyChange.emit();
   }
 
@@ -55,5 +57,32 @@ export class StoryService {
 
   getMain(): any {
     return this.main;
+  }
+
+  setActionsFromObj(data: any[]): void {
+    console.log(data);
+    const appropriateActions = data.filter((a) => {
+      return this.stringLogicSVC.checkConditions(a.conditions) || a.forceShow;
+    });
+    if (!appropriateActions) return;
+
+    const formattedActions = appropriateActions.map((a) => {
+      const descObject = a.desc.find((d: any) => {
+        return this.stringLogicSVC.checkConditions(d.conditions);
+      });
+      return {
+        conditionStrings: this.stringLogicSVC.getConditionsNames(a.conditions),
+        title: this.stringSVC.get(a.title_id),
+        desc: this.stringSVC.get(descObject.string_id),
+        forceShow:
+          a.forceShow && !this.stringLogicSVC.checkConditions(a.conditions),
+      };
+    });
+    console.log(formattedActions);
+    this.actions = formattedActions;
+  }
+
+  getActions(): any {
+    return this.actions;
   }
 }

@@ -1,2 +1,14 @@
-<div class="title">{{title}}</div>
-<div class="main">{{main}}</div>
+<div class="story">
+  <div class="title" [innerHTML]="title"></div>
+  <div class="main" [innerHTML]="main"></div>
+  <div class="actions">
+    <div class="action" *ngFor="let action of actions" [class.disabled]="action.forceShow">
+      <div class="action_title">{{action.title}}</div>
+      <div class="action_desc">{{action.desc}}</div>
+      <div class="action_buttonWrapper">
+        <div class="action_reasons" *ngFor="let str of action.conditionStrings">{{str}}</div>
+        <div class="action_button">Go</div>
+      </div>
+    </div>
+  </div>
+</div>

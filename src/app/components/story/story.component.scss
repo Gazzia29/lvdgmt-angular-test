@@ -1,0 +1,68 @@
+.story {
+  font-size: 14px;
+  padding: 20px;
+  line-height: 20.3px;
+  font-family: "Fira Sans";
+}
+
+.title {
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-weight: 700;
+  font-family: "Playfair Display", serif
+}
+
+.actions {
+  margin-top: 10px;
+  width: 100%;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+
+  .action {
+    padding: 15px;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #c5afa4;
+    border-radius: 6px;
+
+    .action_title {
+      font-weight: 500;
+    }
+
+    .action_buttonWrapper {
+      width: 100%;
+      display: flex;
+      justify-content: right;
+      align-items: center;
+      gap: 7px;
+
+      .action_button {
+        background-color: #2f2926;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 6px;
+      }
+    }
+
+    .action_reasons {
+      text-align: right;
+    }
+
+    &.disabled {
+      background-color: #bebebe;
+      color: #606060;
+
+      .action_buttonWrapper .action_button {
+        background-color: #a4a4a4;
+        color: #656565;
+      }
+
+      .action_reasons {
+        font-weight: 500;
+
+        color: #494949;
+      }
+    }
+  }
+}

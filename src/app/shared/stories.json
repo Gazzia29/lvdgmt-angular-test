@@ -27,6 +27,8 @@
     ],
     "actions": [
       {
+        "forceShow": true,
+        "conditions": [["timeperiod", "not", "0"]],
         "title_id": "ac_ti_0_to_1",
         "desc": [
           {
