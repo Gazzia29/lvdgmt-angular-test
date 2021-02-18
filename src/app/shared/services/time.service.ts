@@ -25,7 +25,7 @@ export class TimeService implements Time {
   ];
 
   constructor() {
-    this.hours = 8;
+    this.hours = 10;
     this.minutes = 0;
     this.day = 0;
     this.period = 0;

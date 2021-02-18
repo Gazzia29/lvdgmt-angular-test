@@ -27,8 +27,6 @@
     ],
     "actions": [
       {
-        "forceShow": true,
-        "conditions": [["timeperiod", "not", "0"]],
         "title_id": "ac_ti_0_to_1",
         "desc": [
           {
@@ -40,7 +38,8 @@
             "string_id": "ac_de_0_to_1_night"
           }
         ],
-        "action": ["level", "set", "2"]
+        "actions": [["level", "set", "2"]],
+        "pointsCost": 2
       }
     ]
   }

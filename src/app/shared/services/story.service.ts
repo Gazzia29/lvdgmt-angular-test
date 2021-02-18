@@ -76,6 +76,7 @@ export class StoryService {
         desc: this.stringSVC.get(descObject.string_id),
         forceShow:
           a.forceShow && !this.stringLogicSVC.checkConditions(a.conditions),
+        pointsCost: a.pointsCost,
       };
     });
     console.log(formattedActions);

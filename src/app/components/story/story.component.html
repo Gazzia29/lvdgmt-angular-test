@@ -7,7 +7,9 @@
       <div class="action_desc">{{action.desc}}</div>
       <div class="action_buttonWrapper">
         <div class="action_reasons" *ngFor="let str of action.conditionStrings">{{str}}</div>
-        <div class="action_button">Go</div>
+        <div class="action_button">Go
+          <div class="cost" *ngIf="action.pointsCost">({{action.pointsCost}})</div>
+        </div>
       </div>
     </div>
   </div>

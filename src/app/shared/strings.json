@@ -25,14 +25,14 @@
   },
   {
     "id": "ac_ti_0_to_1",
-    "content": "En direction du bois"
+    "content": "Aller en direction du bois"
   },
   {
     "id": "ac_de_0_to_1_day",
-    "content": "De toute évidence, la fraîcheur d'un bois ne vous fera pas de mal maintenant."
+    "content": "De toute évidence, la fraîcheur des arbres ne vous fera pas de mal maintenant : vous décidez de vous écarter du chemin."
   },
   {
     "id": "ac_de_0_to_1_night",
-    "content": "Obscur ou pas obscur, vous aimez les arbres et la nuit."
+    "content": "Obscur ou pas obscur, vous décidez (avec courage ou stupidité) de vous écarter du chemin pour vous aventurer à travers les arbres."
   }
 ]
