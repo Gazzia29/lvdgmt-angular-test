@@ -9,6 +9,12 @@ import { TimeService } from './time.service';
   providedIn: 'root',
 })
 export class StoryService {
+  storyChange: EventEmitter<any> = new EventEmitter();
+
+  title = '';
+  actions: any;
+  main: any;
+
   constructor(
     private levelSVC: LevelService,
     private timeSVC: TimeService,
@@ -23,11 +29,6 @@ export class StoryService {
       this.setStoryFromId(levelSVC.getId());
     });
   }
-  title = '';
-  actions: any;
-  main: any;
-
-  storyChange: EventEmitter<any> = new EventEmitter();
 
   setStoryFromId(id: any): void {
     const storyObject = Stories.find((s) => s.id === id);
@@ -43,33 +44,25 @@ export class StoryService {
     this.title = this.stringSVC.get(titleID);
   }
 
-  getTitle(): string {
-    return this.title;
-  }
-
   setMainFromObj(data: any[]): void {
-    const appropriateStory = data.find((m) => {
-      return this.stringLogicSVC.checkConditions(m.conditions);
-    });
+    const appropriateStory = data.find((m) =>
+      this.stringLogicSVC.checkConditions(m.conditions)
+    );
     if (!appropriateStory) return;
     this.main = this.stringSVC.get(appropriateStory.string_id);
   }
 
-  getMain(): any {
-    return this.main;
-  }
-
   setActionsFromObj(data: any[]): void {
     console.log(data);
-    const appropriateActions = data.filter((a) => {
-      return this.stringLogicSVC.checkConditions(a.conditions) || a.forceShow;
-    });
+    const appropriateActions = data.filter(
+      (a) => this.stringLogicSVC.checkConditions(a.conditions) || a.forceShow
+    );
     if (!appropriateActions) return;
 
     const formattedActions = appropriateActions.map((a) => {
-      const descObject = a.desc.find((d: any) => {
-        return this.stringLogicSVC.checkConditions(d.conditions);
-      });
+      const descObject = a.desc.find((d: any) =>
+        this.stringLogicSVC.checkConditions(d.conditions)
+      );
       return {
         conditionStrings: this.stringLogicSVC.getConditionsNames(a.conditions),
         title: this.stringSVC.get(a.title_id),
@@ -83,7 +76,4 @@ export class StoryService {
     this.actions = formattedActions;
   }
 
-  getActions(): any {
-    return this.actions;
-  }
 }

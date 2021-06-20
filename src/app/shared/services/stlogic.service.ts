@@ -13,17 +13,13 @@ export class StringLogicService {
 
   checkConditions(conditions: string[][]): boolean {
     if (conditions) {
-      return conditions.every((c) => {
-        return this.logicController(c);
-      });
+      return conditions.every((c) => this.logicController(c));
     } else return true;
   }
 
   getConditionsNames(conditions: string[][]): string[] {
     if (conditions) {
-      return conditions.map((c) => {
-        return this.logicController(c, true);
-      });
+      return conditions.map((c) => this.logicController(c, true));
     } else return [];
   }
 

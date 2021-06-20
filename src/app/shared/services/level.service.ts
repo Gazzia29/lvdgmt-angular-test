@@ -4,8 +4,8 @@ import { EventEmitter, Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class LevelService {
-  private id!: number;
   levelChange: EventEmitter<number> = new EventEmitter();
+  private id!: number;
 
   constructor() {
     this.setId(0);

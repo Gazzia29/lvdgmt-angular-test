@@ -7,8 +7,11 @@ import Scenes from '../scenes.json';
   providedIn: 'root',
 })
 export class SceneService {
+  sceneChange: EventEmitter<any> = new EventEmitter();
+
   sceneType: any;
   backgroundElements: any[];
+
   constructor(private timeService: TimeService, levelService: LevelService) {
     this.backgroundElements = [];
     this.setSceneFromId(0);
@@ -16,7 +19,6 @@ export class SceneService {
       this.setSceneFromId(id);
     });
   }
-  sceneChange: EventEmitter<any> = new EventEmitter();
 
   setSceneFromId(id: number): void {
     const sceneObject = Scenes.find((s) => s.id === id);
@@ -45,30 +47,8 @@ export class SceneService {
   getBackgroundTimePeriod(): any {
     const time = this.timeService.getHours();
     return [
-      0,
-      0,
-      2,
-      2,
-      4,
-      4,
-      6,
-      6,
-      8,
-      8,
-      10,
-      10,
-      12,
-      12,
-      14,
-      14,
-      16,
-      16,
-      18,
-      18,
-      20,
-      20,
-      22,
-      22,
+      0, 0, 2, 2, 4, 4, 6, 6, 8, 8, 10, 10, 12, 12, 14, 14, 16, 16, 18, 18, 20,
+      20, 22, 22,
     ][time];
   }
 

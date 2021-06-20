@@ -4,10 +4,10 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class PlayerService {
-  constructor() {}
-
   private genre = 'm';
   private name = 'Joseph';
+
+  constructor() {}
 
   getGenre(): string {
     return this.genre;
