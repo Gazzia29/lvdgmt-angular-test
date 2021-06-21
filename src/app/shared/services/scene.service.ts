@@ -1,7 +1,7 @@
 import { TimeService } from './time.service';
 import { EventEmitter, Injectable } from '@angular/core';
 import { LevelService } from './level.service';
-import Scenes from '../scenes.json';
+import Scenes from '../data/scenes.json';
 
 @Injectable({
   providedIn: 'root',

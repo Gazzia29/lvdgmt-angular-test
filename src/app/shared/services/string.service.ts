@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import Strings from '../strings.json';
+import Strings from '../data/strings.json';
 import { PlayerService } from './player.service';
 @Injectable({
   providedIn: 'root',

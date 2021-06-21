@@ -1,6 +1,6 @@
 import { EventEmitter, Injectable } from '@angular/core';
-import { Time } from '@app/shared/types/Time';
-import { TimeObject } from '@app/shared/types/TimeObject';
+import { Time } from '@app/shared/models/Time';
+import { TimeObject } from '@app/shared/models/TimeObject';
 import { SceneService } from './scene.service';
 @Injectable({
   providedIn: 'root',

@@ -1,6 +1,6 @@
 import { TimeService } from '@services/time.service';
 import { Component, OnInit } from '@angular/core';
-import { TimeObject } from '@app/shared/types/TimeObject';
+import { TimeObject } from '@app/shared/models/TimeObject';
 
 @Component({
   templateUrl: './game.component.html',

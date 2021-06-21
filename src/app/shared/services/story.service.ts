@@ -2,7 +2,7 @@ import { StringService } from './string.service';
 import { StringLogicService } from './stlogic.service';
 import { EventEmitter, Injectable } from '@angular/core';
 import { LevelService } from './level.service';
-import Stories from '../stories.json';
+import Stories from '../data/stories.json';
 import { TimeService } from './time.service';
 
 @Injectable({
